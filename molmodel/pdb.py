@@ -5,15 +5,16 @@ from copy import deepcopy as _deepcopy
 
 class PDB:
 
-    def __init__(self, pdb_id=None, load=False):
+    def __init__(self, pdb_id=None, method=None, resolution=None, title=None,
+                deposition_date=None, mmtf=None, unit_cell=None):
 
         self.id = pdb_id
-        self.method = None
-        self.resolution = None
-        self.title = None
-        self.deposition_date = None
-        self.mmtf = None
-        self.unit_cell = None
+        self.method = method
+        self.resolution = resolution
+        self.title = title
+        self.deposition_date = deposition_date
+        self.mmtf = mmtf                         # mmtf-python
+        self.unit_cell = unit_cell
 
         self.bioassembly = {}
         self.group = {}
@@ -42,21 +43,28 @@ class PDB:
         self.num_dnas = {}
         self.num_rnas = {}
 
+    def from_mmtf(self,mmtf):
 
-        if load:
-            self.load_data()
+        self.mmtf = mmtf
 
-    def load_data(self):
+
         pass
 
+    def from_pdb_id(self,pdb_id):
+        pass
 
-def equal_cards(card1=None, card2=None):
-    return card1['Id']==card2['Id']
+    def from_pdb_file(self,pdb_id):
+        pass
 
-def merge_cards(cards=None):
-    return cards[0]
+def identity(item1=None, item2=None):
 
-def cards_depuration(cards=None):
+    return item1.id==item2['Id']
+
+def merge(cards=None):
+
+    pass
+
+def depuration(cards=None):
 
     num_cards = len(cards)
     pairs_equal=[]
