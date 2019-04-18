@@ -1,15 +1,16 @@
 
 class Chain:
 
-    def __init__(self, chain_id=None, index=None, name=None, chain_type=None,
-                 bioassembly_id=None):
+    def __init__(self):
 
-        self.id = chain_id
-        self.index = index
-        self.name = name
-        self.type = chain_type
+        self.id = None
+        self.index = None
+        self.name = None
+        self.type = None
 
-        self.bioassembly_id = bioassembly_id
+        self.bioassembly_id = None
+        self.bioassembly_index = None
+        self.bioassembly_name = None
 
         self.entity = []
         self.segment = []

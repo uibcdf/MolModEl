@@ -1,6 +1,6 @@
 from .entity import Entity as _Entity
 
-class Protein(_Entity):
+class DNA(_Entity):
 
     def __init__(self):
 
