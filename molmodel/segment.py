@@ -2,31 +2,39 @@
 
 class Segment:
 
-    def __init__(self, segment_id=None, index=None, name=None, segment_type=None,
-                 index_start=None, index_end=None, pdb_start=None, pdb_end=None,
-                 uniprot_start=None, uniprot_end=None, sequence=None,
-                 bioassembly_id=None, entity_id=None, chain_id=None):
+    def __init__(self):
 
-        self.id = segment_id
-        self.index = index
-        self.name = name
-        self.type = segment_type
+        self.index = None
+        self.id = None
+        self.name = None
+        self.type = None
 
-        self.index_start = index_start
-        self.index_end = index_end
-        self.pdb_start = pdb_start
-        self.pdb_end = pdb_end
-        self.uniprot_start = uniprot_start
-        self.uniprot_end = uniprot_end
+        self.index_start = 0
+        self.index_end = 0
+        self.pdb_start = 0
+        self.pdb_end = 0
+        self.uniprot_start = 0
+        self.uniprot_end = 0
         self.length = 0
 
-        self.sequence = sequence
+        self.sequence = None
         self.secondary_structure_dssp = None
         self.secondary_structure_abc = None
 
-        self.bioassembly_id = bioassembly_id
-        self.entity_id = entity_id
-        self.chain_id = chain_id
+        self.bioassembly_index = None
+        self.bioassembly_id = None
+        self.bioassembly_name = None
+        self.bioassembly_type = None
+
+        self.entity_index = None
+        self.entity_id = None
+        self.entity_name = None
+        self.entity_type = None
+
+        self.chain_index = None
+        self.chain_id = None
+        self.chain_name = None
+        self.chain_type = None
 
         self.group = []
         self.atom = []

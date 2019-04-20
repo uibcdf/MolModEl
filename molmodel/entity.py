@@ -1,19 +1,26 @@
 
 class Entity:
 
-    def __init__(self, entity_id=None, index=None, name=None, entity_type=None,
-                 bioassembly_id=None, chain_id=None):
+    def __init__(self):
 
-        self.id = entity_id
-        self.index = index
-        self.name = name
-        self.type = entity_type
+        self.id = None
+        self.index = None
+        self.name = None
+        self.type = None
 
-        self.bioassembly_id = bioassembly_id
-        self.chain_id = chain_id
+        self.bioassembly_id = None
+        self.bioassembly_index = None
+        self.bioassembly_name = None
+        self.bioassembly_type = None
+
+        self.chain_id = None
+        self.chain_index = None
+        self.chain_name = None
+        self.chain_type = None
 
         self.segment = []
         self.group = []
+        self.atom = []
         self.bond = []
 
         self.num_segments = 0

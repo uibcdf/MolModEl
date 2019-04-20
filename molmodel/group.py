@@ -1,20 +1,35 @@
 
 class Group:
 
-    def __init__(self, group_id=None, index=None, name=None, group_type=None,
-                 letter_code=None,
-                 bioassembly_id=None, entity_id=None, chain_id=None, segment_id=None):
+    def __init__(self):
 
-        self.id = group_id
-        self.index = index
-        self.name = name
-        self.type = group_type
+        self.index = None
+        self.id = None
+        self.name = None
+        self.type = None
+
         self.letter_code = None
+        self.formal_charge = None
 
-        self.bioassembly_id = bioassembly_id
-        self.entity_id = entity_id
-        self.chain_id = chain_id
-        self.segment_id = segment_id
+        self.bioassembly_index = None
+        self.bioassembly_id = None
+        self.bioassembly_name = None
+        self.bioassembly_type = None
+
+        self.entity_index = None
+        self.entity_id = None
+        self.entity_name = None
+        self.entity_type = None
+
+        self.chain_index = None
+        self.chain_id = None
+        self.chain_name = None
+        self.chain_type = None
+
+        self.segment_index = None
+        self.segment_id = None
+        self.segment_name = None
+        self.segment_type = None
 
         self.atom = []
         self.bond = []
