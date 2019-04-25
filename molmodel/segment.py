@@ -43,3 +43,4 @@ class Segment:
         self.num_groups = 0
         self.num_atoms = 0
         self.num_bonds = 0
+

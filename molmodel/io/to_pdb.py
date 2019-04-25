@@ -11,6 +11,7 @@ def from_mmtf(mmtf):
 
     pdb=_PDB()
 
+    pdb.id = mmtf.structure_id
     pdb.method = mmtf.experimental_methods
     pdb.title = mmtf.title
     pdb.resolution = mmtf.resolution
